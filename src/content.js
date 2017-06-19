@@ -27,5 +27,8 @@ function removeUnneededSymbols(text) {
                .replace(/<ul>/gi, '')
                .replace(/<\/ul>/gi, '')
                .replace(/  /gi, '')
-               .replace(/\n\n/gi, '\n');
+               .replace(/\n\n/gi, '\n')
+               .replace(/&#39;t/gi, '\'')
+               .replace(/&amp;/gi, '&')
+               .replace(/&quot;/gi, '"');
 }
