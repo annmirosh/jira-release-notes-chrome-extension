@@ -7,6 +7,13 @@
     "default_title": "Data getter for Synqq",
     "default_icon": "images/icon.png"
   },
+
+  "icons": {
+    "128": "images/icon.png",
+    "16": "images/icon.png",
+    "48": "images/icon.png"
+  },
+
   "permissions": [
     "https://*/*",
     "http://*/*",
@@ -14,6 +21,7 @@
     "activeTab",
     "background"
   ],
+
   "background": {
     "scripts": [
       "src/background.js"
