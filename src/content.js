@@ -19,16 +19,20 @@ function formatReleaseNotes() {
 }
 
 function removeUnneededSymbols(text) {
-    return text.replace(/<li>\[<a href='/gi, '')
+    text = text.replace(/<li>\[<a href='/gi, '')
                .replace(/<\/li>/gi, '')
                .replace(/'>.*?<\/a>\]/gi, '')
-               .replace(/<h2>/gi, '')
+               .replace(/<h2>/gi, '\n')
                .replace(/<\/h2>/gi, '')
-               .replace(/<ul>/gi, '')
+               .replace(/<ul>\n/gi, '')
                .replace(/<\/ul>/gi, '')
                .replace(/  /gi, '')
                .replace(/\n\n/gi, '\n')
                .replace(/&#39;t/gi, '\'')
                .replace(/&amp;/gi, '&')
                .replace(/&quot;/gi, '"');
+
+    text = text.replace(/\n/i, '');
+
+    return text;
 }
