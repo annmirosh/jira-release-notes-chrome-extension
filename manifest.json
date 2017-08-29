@@ -1,6 +1,6 @@
 {
   "name": "JIRA's Release Notes formatter",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "manifest_version": 2,
   "description": "This is a small extension for Chrome that will format standard output of release notes in JIRA",
   "browser_action": {
